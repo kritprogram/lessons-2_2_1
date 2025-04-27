@@ -1,72 +1,76 @@
 .container {
-	text-align: center;
-	max-width: 950px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  width: 320px;
+  padding: 20px;
 	margin: 0 auto;
 }
 
-.buttons-container {
-	display: flex;
-	justify-content: center;
-	gap: 10px;
+.output {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 100%;
+  padding: 10px;
+  font-size: 1.8em;
+  text-align: right;
+  overflow-y: auto;
+  max-height: 100px;
+  min-height: 50px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.buttonsContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-top: 20px;
 }
 
 .button {
-	padding: 0.5em 0.75em;
-	background-color: hsl(var(--accent-color-hue), var(--accent-color-saturation), 92%);
-	font-size: 18px;
-	border: none;
-	transition: background-color 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+	font-weight: bold;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .button:hover {
-	background-color: hsl(var(--accent-color-hue), var(--accent-color-saturation), 87%);
+  transform: scale(1.05);
 }
 
-.button:disabled {
-	background-color: var(--disabled-color);
+.button:active {
+  transform: scale(0.95);
 }
 
-.steps-content {
-	margin-bottom: 30px;
-	min-height: 100px;
-	border: 2px solid hsl(var(--accent-color-hue), var(--accent-color-saturation), 92%);
-	border-radius: 15px;
-	padding: 15px 20px;
+.numberButton {
+  background-color: #dbe4f5;
+  color: #2d4059;
 }
 
-.steps-list {
-	list-style: none;
-	margin: 0;
-	margin-bottom: 30px;
-	padding: 0;
-	display: flex;
-	justify-content: space-between;
-	gap: 15px;
+.specialButton {
+	background-color: #db6c6c;
+	color: #ffffff;
 }
 
-.steps-item {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	flex: 1 1 0px;
-	font-size: 0.75rem;
+.operationButton {
+  background-color: #fce4b6;
+  color: #7a4e1a;
 }
 
-.steps-item-button {
-	cursor: pointer;
-	border-radius: 50%;
-	padding: 0.75rem 1rem;
-	background: #cccccc;
-	border: none;
-	margin-bottom: 0.25rem;
-}
-
-.steps-item.active .steps-item-button,
-.steps-item.done .steps-item-button {
-	background: hsl(var(--accent-color-hue), var(--accent-color-saturation), 92%);
-}
-
-.steps-item.active,
-.steps-item.active .steps-item-button {
-	font-weight: bold;
+.equalButton {
+  grid-row: span 2;
+  background-color: #f7c44f;
+  color: #604d10;
 }
