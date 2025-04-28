@@ -1,62 +1,68 @@
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 15px;
-  width: 320px;
-  padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(255, 255, 255, 0.9);
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+	border-radius: 15px;
+	width: 320px;
+	padding: 20px;
 	margin: 0 auto;
 }
 
 .output {
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  width: 100%;
-  padding: 10px;
-  font-size: 1.8em;
-  text-align: right;
-  overflow-y: auto;
-  max-height: 100px;
-  min-height: 50px;
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+	background-color: #f0f0f0;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	width: 100%;
+	padding: 10px;
+	font-size: 1.8em;
+	text-align: right;
+	overflow-y: auto;
+	max-height: 100px;
+	min-height: 50px;
+	box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+	color: #000;
+	transition: color 0.3s ease;
+}
+
+.resultColor {
+	color: #d62828;
 }
 
 .buttonsContainer {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 12px;
-  margin-top: 20px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 12px;
+	margin-top: 20px;
 }
 
 .button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.2em;
 	font-weight: bold;
-  padding: 15px;
-  cursor: pointer;
-  border-radius: 10px;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
+	padding: 15px;
+	cursor: pointer;
+	border-radius: 10px;
+	transition: all 0.3s ease;
+	position: relative;
+	overflow: hidden;
 }
 
 .button:hover {
-  transform: scale(1.05);
+	transform: scale(1.05);
 }
 
 .button:active {
-  transform: scale(0.95);
+	transform: scale(0.95);
 }
 
 .numberButton {
-  background-color: #dbe4f5;
-  color: #2d4059;
+	background-color: #dbe4f5;
+	color: #2d4059;
 }
 
 .specialButton {
@@ -65,12 +71,12 @@
 }
 
 .operationButton {
-  background-color: #fce4b6;
-  color: #7a4e1a;
+	background-color: #fce4b6;
+	color: #7a4e1a;
 }
 
 .equalButton {
-  grid-row: span 2;
-  background-color: #f7c44f;
-  color: #604d10;
+	grid-row: span 2;
+	background-color: #f7c44f;
+	color: #604d10;
 }
